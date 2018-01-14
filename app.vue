@@ -1,7 +1,7 @@
 <template>
    <div>
-       <div class='footer'>
-           这里从头部变成了尾部
+       <div class='header'>
+           这里依然是头部
        </div>
    </div>
 </template>
