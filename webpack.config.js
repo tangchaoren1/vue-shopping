@@ -1,27 +1,20 @@
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-
 var config = {
-    entry: {
-        main: './main'
-    },
+    entry: __dirname + '/main.js',
     output: {
-        path: path.join(__dirname, './dist'),
-        publicPath: '/dist/',
-        filename: 'main.js'
+        path: __dirname + '/dist',
+        filename: 'bundle.js'
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.vue$/,
                 loader: 'vue-loader',
                 options: {
                     loaders: {
-                        css: ExtractTextPlugin.extract({
-                            use: 'css-loader',
-                            fallback: 'vue-style-loader'
-                        })
-                    }
+                        scss: 'style-loader!css-loader!sass-loader',
+                        sass: 'style-loader!css-loader!sass-loader?indentedSyntax',
+                    },
                 }
             },
             {
@@ -32,8 +25,7 @@ var config = {
             {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
-                    use: 'css-loader',
-                    fallback: 'style-loader'
+                    use: ['style-loader', 'css-loader']
                 })
             },
             {
@@ -46,7 +38,7 @@ var config = {
         new ExtractTextPlugin({
             filename: '[name].css',
             allChunks: true
-        })
+        }),
     ]
 };
 

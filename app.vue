@@ -1,7 +1,12 @@
 <template>
-   <div>
-       <div class='header'>
-        第12次 及时啊 很好
-       </div>
-   </div>
+  <slowdown></slowdown>
 </template>
+
+<script>
+   import slowdown from './views/animate-slow.vue';
+   export default{
+       components:{slowdown}
+   }
+</script>
+
+
