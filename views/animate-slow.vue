@@ -42,16 +42,10 @@ export default {
                     this.isClicked = true;
                 }else{
                     this.items[index].isdown = !this.items[index].isdown;
-                    console.log(this.items[index].isdown)
                     index++;
                 }
             },1000)
          }
-         
-        
-        //  for(let i = 0;i<this.items.length;i++){
-        //     this.items[0].isdown = !this.items[0].isdown;
-        //  }
      } 
   }
 }
