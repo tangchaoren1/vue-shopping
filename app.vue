@@ -1,12 +1,15 @@
 <template>
-  <slowdown></slowdown>
+  <div>
+     <router-link to="/Slowdown">啊啊啊</router-link>
+     <router-view></router-view>
+  </div>
 </template>
 
 <script>
-   import slowdown from './views/animate-slow.vue';
-   export default{
-       components:{slowdown}
-   }
+  //  import Slowdown from './views/AnimateSlow.vue';
+  //  export default{
+  //      components:{Slowdown}
+  //  }
 </script>
 
 
