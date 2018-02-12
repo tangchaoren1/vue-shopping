@@ -6,10 +6,7 @@
 </template>
 
 <script>
-  //  import Slowdown from './views/AnimateSlow.vue';
-  //  export default{
-  //      components:{Slowdown}
-  //  }
+  
 </script>
 
 
